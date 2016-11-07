@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+    <TableRow
+        android:background="@color/colorPrimary"
+        >
+        <TextView
+            android:layout_column="1"
+            android:layout_span="2"
+            android:text="MENU"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="18dp"
+            android:textColor="@color/menu_text"
+            android:padding="3dip" />
+        <ImageView
+            android:id="@+id/closebutton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:gravity="right"
+            android:layout_margin="10dp"
+            android:onClick="myFancyMethod"
+            android:src="@drawable/cancel">
+        </ImageView>
+
+    </TableRow>
+</TableLayout>
