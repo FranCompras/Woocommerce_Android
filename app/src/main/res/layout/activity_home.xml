@@ -23,8 +23,8 @@
         android:background="@color/colorPrimaryDark"
         app:theme="@style/AppTheme.NoActionBar"
         app:itemTextColor="@color/menu_text"
-        app:itemBackground="@drawable/menu_bg"
 
+        android:paddingTop="20dp"
         app:menu="@menu/activity_home_drawer">
 
         <LinearLayout

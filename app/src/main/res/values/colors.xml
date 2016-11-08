@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#e74c3c</color>
-    <color name="colorPrimaryDark">#c0392b</color>
-    <color name="colorAccent">#34495e</color>
+
+    <color name="colorPrimary">#1abc9c</color>
+    <color name="colorPrimaryDark">#16a085</color>
+    <color name="colorAccent">#2c3e50</color>
+
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
-    <color name="red">#ff0000</color>
+    <color name="red">#95a5a6</color>
     <color name="grey">#cccccc</color>
     <color name="grey2">#bdc3c7</color>
     <color name="grey3">#333333</color>
@@ -16,14 +18,19 @@
     <!-- HomeActivity -->
     <color name="search_txt_color">#999999</color>
     <color name="home_trending">#666666</color>
-    <color name="home_button_add">#e74c3c</color>
+    <color name="home_button_add">#16a085</color>
 
     <!-- Menu -->
-    <color name="menu_text">#c5c4c4</color>
-    <color name="sub_menu_text">#000000</color>
+    <color name="menu_text">#666666</color>
+    <color name="sub_menu_text">#ffffff</color>
 
     <!-- product view -->
     <color name="indicator_bg">#c0392b</color>
+
+    <!-- colors for expandable list -->
+    <drawable name="color_one">#5b7fa1</drawable>
+    <drawable name="color_two">#5b7fa1</drawable>
+    <drawable name="color_three">#425c75</drawable>
 
 
 

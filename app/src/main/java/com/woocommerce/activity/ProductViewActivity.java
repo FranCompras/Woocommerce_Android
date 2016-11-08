@@ -31,9 +31,9 @@ public class ProductViewActivity extends AppCompatActivity {
     String imageUrl;
     ImageButton leftNav;
     ImageButton rightNav;
-    ArrayList<String> list = new ArrayList<String>();
+    ArrayList<Integer> list = new ArrayList<Integer>();
 
-    int NUM_PAGES = 5;
+    int NUM_PAGES = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +46,10 @@ public class ProductViewActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        list.add("http://balogunmarket.ng/wp-content/uploads/2016/03/Back-3.jpg");
-        list.add("http://balogunmarket.ng/wp-content/uploads/2016/03/Back-3.jpg");
-        list.add("http://balogunmarket.ng/wp-content/uploads/2016/03/Back-3.jpg");
-        list.add("http://balogunmarket.ng/wp-content/uploads/2016/03/Back-3.jpg");
-        list.add("http://balogunmarket.ng/wp-content/uploads/2016/03/Back-3.jpg");
+        list.add(R.drawable.item1);
+        list.add(R.drawable.item2);
+        list.add(R.drawable.item3);
+        list.add(R.drawable.item4);
 
         //viewpager
         viewPager = (ViewPager) findViewById(R.id.viewpager_productview);
@@ -65,7 +64,7 @@ public class ProductViewActivity extends AppCompatActivity {
 
         //tabLayout.setTabTextColors(Color.WHITE, Color.WHITE);
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
-            tabLayout.getTabAt(i).setIcon(R.drawable.productimage3)
+            tabLayout.getTabAt(i).setIcon(R.drawable.defaultimage)
                     .setText("Front "+i);
         }
 
@@ -81,29 +80,6 @@ public class ProductViewActivity extends AppCompatActivity {
                 context.startActivity(intent);
             }
         });
-
-
-
-
-//        View view1 = getLayoutInflater().inflate(R.layout.custom_tab, null);
-//        view1.findViewById(R.id.icon).setBackground(getResources().getDrawable(R.drawable.productimage));
-//        tabLayout.addTab(tabLayout.newTab().setCustomView(view1));
-//
-//        View view2 = getLayoutInflater().inflate(R.layout.custom_tab, null);
-//        view2.findViewById(R.id.icon).setBackground(getResources().getDrawable(R.drawable.productimage));
-//        tabLayout.addTab(tabLayout.newTab().setCustomView(view2));
-//
-//        View view3 = getLayoutInflater().inflate(R.layout.custom_tab, null);
-//        view3.findViewById(R.id.icon).setBackground(getResources().getDrawable(R.drawable.productimage));
-//        tabLayout.addTab(tabLayout.newTab().setCustomView(view3));
-//
-//        View view4 = getLayoutInflater().inflate(R.layout.custom_tab, null);
-//        view4.findViewById(R.id.icon).setBackground(getResources().getDrawable(R.drawable.productimage));
-//        tabLayout.addTab(tabLayout.newTab().setCustomView(view4));
-//
-//        View view5 = getLayoutInflater().inflate(R.layout.custom_tab, null);
-//        view5.findViewById(R.id.icon).setBackground(getResources().getDrawable(R.drawable.productimage));
-//        tabLayout.addTab(tabLayout.newTab().setCustomView(view5));
 
 
         indicator();
@@ -130,6 +106,7 @@ public class ProductViewActivity extends AppCompatActivity {
                     viewPager.setCurrentItem(tab);
                     leftNav.setVisibility(View.VISIBLE);
                     rightNav.setVisibility(View.VISIBLE);
+
                 } else if (tab == 0) {
                     viewPager.setCurrentItem(tab);
                     leftNav.setVisibility(View.GONE);
@@ -155,39 +132,6 @@ public class ProductViewActivity extends AppCompatActivity {
             }
         });
     }
-
-
-//    private void setupViewPager(ViewPager viewPager) {
-//        Adapter adapter = new Adapter(getSupportFragmentManager());
-//        for (int i = 0; i < NUM_PAGES; i++) {
-//            adapter.addFragment(new ScreenSlidePageFragment.newInstance(2,""));
-//        }
-//        viewPager.setAdapter(adapter);
-//    }
-//
-//
-//    static class Adapter extends FragmentPagerAdapter {
-//        private final List<Fragment> mFragments = new ArrayList<>();
-//
-//        public Adapter(FragmentManager fm) {
-//            super(fm);
-//        }
-//
-//        public void addFragment(Fragment fragment) {
-//            mFragments.add(fragment);
-//        }
-//
-//        @Override
-//        public Fragment getItem(int position) {
-//            return mFragments.get(position);
-//        }
-//
-//        @Override
-//        public int getCount() {
-//            return mFragments.size();
-//        }
-//
-//    }
 
     private void setupViewPager(ViewPager viewPager) {
 

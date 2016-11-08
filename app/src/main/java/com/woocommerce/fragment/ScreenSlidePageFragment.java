@@ -33,15 +33,14 @@ public class ScreenSlidePageFragment extends Fragment {
     static final String IMG_LINK = "IMG_LINK";
 
 
-
     private int mPage;
     View view;
     public String tabId = "Tags";
 
-    public static ScreenSlidePageFragment newInstance(int page, String imagelink) {
+    public static ScreenSlidePageFragment newInstance(int page, int imagelink) {
         Bundle args = new Bundle();
         args.putInt(ARG_PAGE, page);
-        args.putString("IMG_LINK", imagelink);
+        args.putInt("IMG_LINK", imagelink);
         ScreenSlidePageFragment fragment = new ScreenSlidePageFragment();
         fragment.setArguments(args);
         return fragment;
@@ -59,17 +58,10 @@ public class ScreenSlidePageFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_screen_slide_page, container, false);
+        int img = getArguments().getInt(IMG_LINK);
 
-
-
-
-
-        String img = getArguments().getString(IMG_LINK);
-        System.out.println("hellothere2"+ img);
-
-
-        ImageView imageView = (ImageView) view.findViewById(R.id.sliderImage);
-        imageView.setImageDrawable(getResources().getDrawable(R.drawable.productimage3));
+        final ImageView imageView = (ImageView) view.findViewById(R.id.sliderImage);
+        imageView.setImageDrawable(getResources().getDrawable(img));
 
         return view;
     }
